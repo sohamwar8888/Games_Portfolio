@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOHAM | Unity Game Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <h2 class="logo">SOHAM<span>DEV</span></h2>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Unity Game Developer</span>
+            <h1>Crafting Immersive <br>Digital Worlds.</h1>
+            <p>Specializing in gameplay systems, combat mechanics, and AI.</p>
+            <div class="hero-btns">
+                <a href="#games" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about reveal">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2>About Me</h2>
+
+                <p>
+                    Hi, I'm <strong>Soham</strong>, a beginner game developer who enjoys building mechanics-focused
+                    games and
+                    experimenting with gameplay systems. I’m particularly interested in how player movement, combat, and
+                    enemy behaviors come together to create engaging and satisfying gameplay.
+                </p>
+
+                <p>
+                    Currently pursuing my <strong>B.Sc. in Computer Science</strong>, I’m still early in my development
+                    journey.
+                    I don’t consider myself an expert yet, but I’m constantly learning, building small projects, and
+                    improving
+                    my understanding of game design and programming.
+                </p>
+
+                <p>
+                    Through each prototype and project, I aim to explore new mechanics, solve technical challenges, and
+                    better understand what makes games feel responsive and enjoyable. My goal is to keep learning, keep
+                    building, and gradually grow into a more capable and well-rounded game developer.
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-tag">Unity 3D</div>
+                <div class="skill-tag">C# Scripting</div>
+                <div class="skill-tag">WebGL Deployment</div>
+                <div class="skill-tag">UI/UX Design</div>
+                <div class="skill-tag">Level Design</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="games reveal">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="card-img">
+                        <img src="images/Road Devil/icon.png" alt="Zombie Defense">
+                    </div>
+                    <div class="card-content">
+                        <h3>Road Devil V1.5</h3>
+                        <p>A top-down survival shooter where players defend against waves of zombies using
+                            weapons and powerups.</p>
+                        <a href="games/Road-Devil.html" class="card-link">Explore Project →</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to collaborate?</h2>
+            <p>Email: <a href="mailto:sohamwarghade8888@gmail.com">sohamwarghade8888@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://github.com/SOHAMdev">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-glow"></div>
+
+    <script>
+        // Keeping your existing Scroll Reveal and Cursor Glow logic
+        window.addEventListener("scroll", reveal);
+        function reveal() {
+            let reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", e => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Defense | SOHAM Dev</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="game-page">
+
+    <nav class="navbar">
+        <div class="container">
+            <h2 class="logo">SOHAM<span>DEV</span></h2>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#games">Games</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="game-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html#games">Games</a> / <span>Zombie Defense</span>
+            </nav>
+            <h1>Zombie Defense</h1>
+            <p class="game-tagline">A top-down survival shooter where players defend against waves of zombies using
+                weapons and turret systems.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="game-video reveal">
+            <div class="video-wrapper">
+                <video controls poster="../images/zombie-poster.jpg">
+                    <source src="../videos/zombieGameplay.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="game-info-grid reveal">
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>Wave-based survival systems</li>
+                    <li>Automated turret defense mechanics</li>
+                    <li>Adaptive AI with multiple enemy types</li>
+                    <li>Challenging boss encounter logic</li>
+                    <li>Smooth weapon switching system</li>
+                </ul>
+            </div>
+
+            <div class="play-card">
+                <h3>Experience the Game</h3>
+                <p>🎮Available for WebGL and Windows.</p>
+                <div class="play-btns">
+                    <a href="#" class="btn btn-full">Play WebGL Build</a>
+                    <a href="#" class="btn btn-outline-dark" download>Download PC (.exe)</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots reveal">
+            <h2>Gallery</h2>
+            <div class="screenshot-grid">
+                <div class="ss-item"><img src="../images/zombie1.jpg" alt="Gameplay Screen 1"></div>
+                <div class="ss-item"><img src="../images/zombie2.jpg" alt="Gameplay Screen 2"></div>
+                <div class="ss-item"><img src="../images/zombie3.jpg" alt="Gameplay Screen 3"></div>
+                <div class="ss-item"><img src="../images/zombie4.jpg" alt="Gameplay Screen 4"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="back-home">
+        <a href="../index.html">← Back to Portfolio</a>
+    </footer>
+
+    <div class="cursor-glow"></div>
+
+    <script>
+        // Keeping your reveal logic
+        window.addEventListener("scroll", () => {
+            let reveals = document.querySelectorAll(".reveal");
+            reveals.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
