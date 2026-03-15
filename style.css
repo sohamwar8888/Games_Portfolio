@@ -149,8 +149,19 @@ align-items:center;
 }
 
 .section-title{
-font-size:2.5rem;
-margin-bottom:20px;
+    font-size:2.5rem;
+    margin-bottom:25px;
+    position:relative;
+    display:inline-block;
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:60px;
+    height:4px;
+    background:var(--accent-orange);
+    margin-top:8px;
 }
 
 .about p{
