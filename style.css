@@ -364,3 +364,52 @@ body.game-page {
         font-size: 2.5rem;
     }
 }
+
+/* ===== MOBILE IMPROVEMENTS ===== */
+
+@media(max-width:600px) {
+
+    /* HERO FIX */
+    .hero {
+        height: auto;
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    /* NAVBAR */
+    .nav-links {
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+
+    /* BUTTONS */
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    /* GAME PAGE */
+    .game-header {
+        padding: 100px 0 40px;
+        text-align: center;
+    }
+
+    /* SCREENSHOTS */
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* DISABLE CURSOR GLOW */
+    .cursor-glow {
+        display: none;
+    }
+}
