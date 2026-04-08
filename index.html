@@ -7,6 +7,7 @@
     <title>SOHAM | Unity Game Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
 </head>
 
 <body>
@@ -40,25 +41,23 @@
             <div class="about-text">
                 <h2>About Me</h2>
 
-                <p>
+                <p class="about-text">
                     Hi, I'm <strong>Soham</strong>, a beginner game developer who enjoys building mechanics-focused
-                    games and
-                    experimenting with gameplay systems. I’m particularly interested in how player movement, combat, and
-                    enemy behaviors come together to create engaging and satisfying gameplay.
+                    games and experimenting with gameplay systems. I'm particularly interested in how player movement,
+                    combat, and enemy behaviors come together to create engaging gameplay.
                 </p>
 
-                <p>
-                    Currently pursuing my <strong>B.Sc. in Computer Science</strong>, I’m still early in my development
+                <p class="about-text">
+                    Currently pursuing my <strong>B.Sc. in Computer Science</strong>, I'm still early in my development
                     journey.
-                    I don’t consider myself an expert yet, but I’m constantly learning, building small projects, and
-                    improving
-                    my understanding of game design and programming.
+                    I don't consider myself an expert yet, but I'm constantly learning, building small projects,
+                    and improving my understanding of game design and programming.
                 </p>
 
-                <p>
-                    Through each prototype and project, I aim to explore new mechanics, solve technical challenges, and
-                    better understand what makes games feel responsive and enjoyable. My goal is to keep learning, keep
-                    building, and gradually grow into a more capable and well-rounded game developer.
+                <p class="about-text">
+                    Through each prototype and project, I aim to explore new mechanics, solve technical challenges,
+                    and better understand what makes games feel responsive and enjoyable. My goal is to keep learning,
+                    keep building, and gradually grow into a more capable game developer.
                 </p>
             </div>
             <div class="skills-grid">
@@ -86,6 +85,7 @@
                         <a href="games/Road-Devil.html" class="card-link">Explore Project →</a>
                     </div>
                 </div>
+
 
 
             </div>
@@ -118,10 +118,49 @@
                 }
             }
         }
+
+
+
         const glow = document.querySelector(".cursor-glow");
         document.addEventListener("mousemove", e => {
             glow.style.left = e.clientX + "px";
             glow.style.top = e.clientY + "px";
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const closeBtn = document.querySelector(".lightbox-close");
+
+            document.querySelectorAll(".ss-item img").forEach(img => {
+                img.addEventListener("click", () => {
+                    lightbox.classList.add("active");
+                    lightboxImg.src = img.src;
+                });
+            });
+
+            // Close when clicking outside image
+            lightbox.addEventListener("click", (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove("active");
+                }
+            });
+
+            // Close button (❌)
+            closeBtn.addEventListener("click", () => {
+                lightbox.classList.remove("active");
+            });
+
+            // ESC key
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    lightbox.classList.remove("active");
+                }
+            });
+
         });
     </script>
 </body>
