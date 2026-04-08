@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road-Devil | SOHAM Dev</title>
+    <title>Road Devil V1.5 | SOHAM Dev</title>
+
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.png">
 </head>
 
 <body class="game-page">
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
             <h2 class="logo">SOHAM<span>DEV</span></h2>
@@ -22,79 +25,179 @@
         </div>
     </nav>
 
+    <!-- HEADER -->
     <header class="game-header">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../index.html#games">Games</a> / <span>Zombie Defense</span>
+                <a href="../index.html#games">Games</a> / <span>Road Devil</span>
             </nav>
+
             <h1>Road Devil V1.5</h1>
-            <p class="game-tagline">A top-down survival shooter where players defend against waves of zombies using
-                weapons and powerups.</p>
+
+            <!-- 🔥 GAME HOOK -->
+            <p class="game-hook">
+                Survive the chaos. Switch weapons instantly. One mistake — you're grabbed.
+            </p>
+
+            <p class="game-tagline">
+                A top-down survival shooter where players defend against waves of zombies using weapons and powerups.
+            </p>
         </div>
     </header>
 
     <main class="container">
+
+        <!-- VIDEO -->
         <section class="game-video reveal">
             <div class="video-wrapper">
                 <video controls poster="../images/Road Devil/icon.png">
                     <source src="../videos/zombieGameplay.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
             </div>
         </section>
 
+        <!-- FEATURES + PLAY -->
         <section class="game-info-grid reveal">
+
             <div class="features">
                 <h2>Key Features</h2>
+
                 <ul class="feature-list">
                     <li>Wave-based survival systems</li>
-                    <li>Adaptive AI with multiple enemy types</li>
-                    <li>Challenging boss encounter logic</li>
+                    <li>Multiple zombie types (speed, normal, tank)</li>
+                    <li>Zombie grab & escape mechanic</li>
                     <li>Smooth weapon switching system</li>
                 </ul>
+
+                <!-- GAME DETAILS -->
+                <div class="game-meta">
+                    <h3>Game Details</h3>
+                    <ul>
+                        <li><strong>Engine:</strong> Unity</li>
+                        <li><strong>Platform:</strong> PC / WebGL</li>
+                        <li><strong>Genre:</strong> Top-down Shooter</li>
+                        <li><strong>Status:</strong> In Development</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="play-card">
                 <h3>Experience the Game</h3>
                 <p>🎮Available for WebGL and Windows.</p>
+
                 <div class="play-btns">
                     <a href="https://soham8888.itch.io/road-devil" class="btn btn-full">Play WebGL Build</a>
                     <a href="#" class="btn btn-outline-dark" download>Download PC (.exe)</a>
                 </div>
             </div>
+
         </section>
 
-        <section class="screenshots reveal">
-            <h2>Gallery</h2>
-            <div class="screenshot-grid">
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/1.png" alt="Gameplay Screen 1"></div>
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/2.png" alt="Gameplay Screen 2"></div>
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/3.png" alt="Gameplay Screen 3"></div>
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/4.png" alt="Gameplay Screen 4"></div>
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/5.png" alt="Gameplay Screen 5"></div>
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/6.png" alt="Gameplay Screen 6"></div>
-                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/7.png" alt="Gameplay Screen 7"></div>
+        <!-- CONTROLS -->
+        <section class="controls reveal">
+            <h2 class="section-title">How to Play</h2>
+
+            <div class="controls-grid">
+                <img src="../images/tutorial/1.png">
+                <img src="../images/tutorial/2.png">
+                <img src="../images/tutorial/3.png">
             </div>
         </section>
+
+        <!-- SCREENSHOTS -->
+        <section class="screenshots reveal">
+            <h2>Gallery</h2>
+
+            <div class="screenshot-grid">
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/1.png"></div>
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/2.png"></div>
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/3.png"></div>
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/4.png"></div>
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/5.png"></div>
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/6.png"></div>
+                <div class="ss-item"><img src="../images/Road Devil/Screen Shots/7.png"></div>
+            </div>
+        </section>
+
+        <!-- DEV NOTES -->
+        <section class="dev-notes reveal">
+            <h2 class="section-title">Developer Notes</h2>
+            <p>
+                This project focuses on responsive combat feel, smooth weapon switching,
+                and engaging enemy interactions. Special attention was given to hit feedback,
+                stagger mechanics, and player control clarity to make combat satisfying.
+            </p>
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="back-home">
         <a href="../index.html">← Back to Portfolio</a>
     </footer>
 
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+    </div>
+
     <div class="cursor-glow"></div>
 
+    <!-- SCRIPT -->
     <script>
-        // Keeping your reveal logic
-        window.addEventListener("scroll", () => {
+        // Keeping your existing Scroll Reveal and Cursor Glow logic
+        window.addEventListener("scroll", reveal);
+        function reveal() {
             let reveals = document.querySelectorAll(".reveal");
-            reveals.forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-                    el.classList.add("active");
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
                 }
-            });
+            }
+        }
+
+        img.addEventListener("click", () => {
+            console.log("clicked");
+        });
+
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", e => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
         });
     </script>
+
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        const images = document.querySelectorAll(".ss-item img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        // Close when clicking outside image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+
+        // ESC key close
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
 </body>
 
 </html>
