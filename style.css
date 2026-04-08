@@ -51,15 +51,24 @@ html {
     flex-wrap: wrap;
 }
 
-.logo {
+.logo,
+.logo a {
     color: white;
     margin: 0;
     font-size: 1.2rem;
     letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .logo span {
     color: var(--accent-orange);
+    transition: 0.3s;
+}
+
+.logo:hover span,
+.logo:hover a {
+    letter-spacing: 5px;
 }
 
 .nav-links {
@@ -336,7 +345,8 @@ body.game-page {
 }
 
 /* SCREENSHOTS */
-.screenshot-grid {
+.screenshot-grid,
+.controls-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
