@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 🔁 CHANGE THESE -->
+    <title>Z-Click | SOHAM Dev</title>
+    <meta name="description" content="[Short game description]">
+    <meta name="keywords" content="Unity Developer, Game Dev, Portfolio">
+    <meta name="author" content="Soham Warghade">
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/Z-Click/icon.png">
+</head>
+
+<body class="game-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <h2 class="logo">
+                <a href="../index.html">SOHAM<span>DEV</span></a>
+            </h2>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#games">Games</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="game-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html#games">Games</a> / <span>Z-Click</span>
+            </nav>
+
+            <h1>Z-Click</h1>
+
+            <p class="game-hook">
+                Fight through relentless zombie waves where every second matters — one mistake and you're grabbed.
+            </p>
+
+            <p class="game-tagline">
+                A fast-paced top-down survival shooter focused on responsive combat, enemy variety, and tactical weapon
+                switching.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- 🎥 VIDEO -->
+        <section class="game-video reveal">
+            <div class="video-wrapper">
+                <video controls poster="../images/Z-Click/icon.png">
+                    <source src="../videos/Z-Click_Gameplay.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- FEATURES + PLAY -->
+        <section class="game-info-grid reveal">
+
+            <div class="features">
+                <h2>Key Features</h2>
+
+                <ul class="feature-list">
+                    <li>Wave-based enemy spawning system with increasing difficulty </li>
+                    <li>Multiple zombie types with unique behaviors (normal, fast, tank)</li>
+                    <li>Hit feedback system for satisfying combat feel </li>
+                    <li>Enemy attack cooldown system for balanced gameplay</li>
+                    <li>Stagger and melee attack combat</li>
+                </ul>
+
+                <!-- GAME DETAILS -->
+                <div class="game-meta">
+                    <h3>Game Details</h3>
+                    <ul>
+                        <li><strong>Engine:</strong> Unity</li>
+                        <li><strong>Platform:</strong> PC / WebGL</li>
+                        <li><strong>Genre:</strong>Action/Horror</li>
+                        <li><strong>Status:</strong>Completed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="play-card">
+                <h3>Experience the Game</h3>
+                <p>🎮 Available platforms</p>
+
+                <div class="play-btns">
+                    <a href="https://soham8888.itch.io/z-click" class="btn btn-full">Play WebGL</a>
+                    <a href="[DOWNLOAD LINK]" class="btn btn-outline-dark" download>Download PC (.exe)</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONTROLS -->
+        <section class="controls reveal">
+            <h2 class="section-title">How to Play</h2>
+
+            <div class="controls-grid">
+                <div class="ss-item"><img src="../images/Z-Click/Tutorials/3.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Tutorials/4.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Tutorials/5.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Tutorials/6.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Tutorials/7.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Tutorials/1.png"></div>
+            </div>
+        </section>
+
+        <!-- SCREENSHOTS -->
+        <section class="screenshots reveal">
+            <h2>Gallery</h2>
+
+            <div class="screenshot-grid">
+                <div class="ss-item"><img src="../images/Z-Click/Screen Shots/1.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Screen Shots/2.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Screen Shots/3.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Screen Shots/4.png"></div>
+                <div class="ss-item"><img src="../images/Z-Click/Screen Shots/5.png"></div>
+            </div>
+        </section>
+
+        <!-- DEV NOTES -->
+        <section class="dev-notes reveal">
+            <h2 class="section-title">Developer Notes</h2>
+            <p>
+                This project was focused on improving core combat feel and responsiveness.
+                I worked on systems like enemy AI behavior, attack timing, and player feedback to make interactions feel
+                impactful. <br>
+
+                Special attention was given to weapon switching smoothness and balancing enemy difficulty across waves.
+                The zombie grab mechanic was implemented to increase tension and punish careless movement. <br>
+
+                Through this project, I focused on writing modular and scalable systems that can be expanded in future
+                updates. <br> <br>
+
+                • Designing scalable wave-based enemy systems <br>
+                • Implementing AI behaviors using state logic (chase, attack, idle) <br>
+                • Creating responsive combat feedback (hit reactions, timing, delay) <br>
+                • Managing player state during combat (damage, stun, grab effects) <br>
+                • Structuring reusable and modular scripts in Unity <br>
+                • Balancing gameplay difficulty for better player experience <br>
+                • Using animation + logic together for gameplay feel <br>
+            </p> <br>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="back-home">
+        <a href="../index.html">← Back to Portfolio</a>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <div class="cursor-glow"></div>
+
+    <!-- SCRIPT -->
+    <script>
+        // Scroll Reveal
+        window.addEventListener("scroll", reveal);
+        function reveal() {
+            let reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        // Cursor Glow
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", e => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const images = document.querySelectorAll(".ss-item img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
